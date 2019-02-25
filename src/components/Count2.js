@@ -19,7 +19,7 @@ const Count = props => {
   });
 
   function doTheThing() {
-    alert('Whoa!');
+    alert('Whoa! Calm down.');
   }
 
   return (
