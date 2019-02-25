@@ -10,17 +10,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -30,4 +25,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+main {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+button {
+  background: #282c34;
+  border: none;
+  border-radius: 3px;
+  color: #efefef;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.35s ease;
+}
+button:hover {
+  background: #61dafb;
+  text-shadow: 1px 1px #aaa;
+}
+
+input {
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
 }
