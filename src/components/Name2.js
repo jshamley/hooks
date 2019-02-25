@@ -8,6 +8,7 @@ const Name = props => {
     const name = e.target.value;
     const newName = name.replace('Geo', 'Je');
     setName(newName);
+    props.updateName(name);
   };
 
   return (
