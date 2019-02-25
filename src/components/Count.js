@@ -5,7 +5,7 @@ const Count = () => {
 
   useEffect(() => {
     document.title = `You clicked ${count} times`;
-  });
+  }, [count]);
 
   return (
     <Fragment>

@@ -9,7 +9,14 @@ const Name = props => {
         Your name is <b>{name}</b>
       </p>
       <p>
-        <input type="text" value={name} onChange={e => setName(e.target.value)} />
+        <input
+          type="text"
+          value={name}
+          onChange={e => {
+            setName(e.target.value);
+            props.updateName(e.target.value);
+          }}
+        />
       </p>
     </Fragment>
   );

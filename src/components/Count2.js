@@ -5,11 +5,15 @@ const Count = props => {
 
   useEffect(() => {
     document.title = `You clicked ${count} times`;
+  }, [count]);
 
+  useEffect(() => {
     const button2 = document.getElementById('secondary-button');
     button2.addEventListener('click', doTheThing);
 
     return () => {
+      // this is our component will unmount
+      // used for cleaning up
       button2.removeEventListener('click', doTheThing);
     };
   });
