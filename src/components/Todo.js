@@ -23,14 +23,14 @@ const Todo = props => {
   console.log(todo);
 
   return (
-    <div>
+    <Fragment>
       {todo.length}
       {todo.length > 0 &&
         todo.map(t => {
           console.log(t);
           return <p>{t.title}</p>;
         })}
-    </div>
+    </Fragment>
   );
 };
 
