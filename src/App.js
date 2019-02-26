@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import Name from './components/Name';
 import Count from './components/Count';
+import Todo from './components/Todo';
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,6 +16,7 @@ const App = props => {
       <main>
         <Count />
         <Name updateName={setName} />
+        <Todo />
       </main>
       <footer>
         <p>
