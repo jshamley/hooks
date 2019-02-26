@@ -4,8 +4,9 @@ import Count from './components/Count';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = props => {
   const [name, setName] = useState('');
+
   return (
     <div className="App">
       <header className="App-header">
@@ -26,6 +27,6 @@ function App() {
       </footer>
     </div>
   );
-}
+};
 
 export default App;

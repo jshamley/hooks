@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Name = props => {
   const [name, setName] = useState('Tommy Bahama');
@@ -24,6 +25,10 @@ const Name = props => {
       </p>
     </Fragment>
   );
+};
+
+Name.propTypes = {
+  updateName: PropTypes.func.isRequired
 };
 
 export default Name;
