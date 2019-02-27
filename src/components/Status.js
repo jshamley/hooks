@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import useStatus from '../hooks/status';
 
-const Todo = props => {
+const Status = props => {
   const [status, setStatus] = useState(false);
   const isActive = useStatus(status);
 
@@ -13,4 +13,4 @@ const Todo = props => {
   );
 };
 
-export default Todo;
+export default Status;
