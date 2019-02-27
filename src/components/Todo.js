@@ -1,21 +1,14 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import useStatus from '../hooks/status';
 
 const Todo = props => {
-  const isActive = useStatus();
-  const [todo, setTodo] = useState([]);
-
-  useEffect(() => {
-    console.log(isActive);
-    setTodo(['test', 'test2']);
-  }, []);
+  const [status, setStatus] = useState(false);
+  const isActive = useStatus(status);
 
   return (
     <Fragment>
-      {todo.length > 0 &&
-        todo.map(t => {
-          return <p key={t}>{t}</p>;
-        })}
+      <p>The status is {isActive.toString()}</p>
+      <button onClick={() => setStatus(!status)}>Change the status</button>
     </Fragment>
   );
 };
