@@ -1,34 +1,20 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import useHttp from '../hooks/http';
-let loaded = false;
+import useStatus from '../hooks/status';
 
 const Todo = props => {
+  const isActive = useStatus();
   const [todo, setTodo] = useState([]);
 
-  useEffect(
-    () =>
-      setTodo(
-        useHttp('https://jsonplaceholder.typicode.com/todos').then(res => {
-          console.log(res);
-        })
-      ),
-    [loaded]
-  );
-
   useEffect(() => {
-    console.log(todo);
-  }, [todo]);
-
-  loaded = true;
-  console.log(todo);
+    console.log(isActive);
+    setTodo(['test', 'test2']);
+  }, []);
 
   return (
     <Fragment>
-      {todo.length}
       {todo.length > 0 &&
         todo.map(t => {
-          console.log(t);
-          return <p>{t.title}</p>;
+          return <p key={t}>{t}</p>;
         })}
     </Fragment>
   );
