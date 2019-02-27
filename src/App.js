@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
-import Name from './components/Name';
-import Count from './components/Count';
+import Name from './components/Name2';
+import Count from './components/Count2';
 import Status from './components/Status';
 import logo from './logo.svg';
 import './App.css';
@@ -15,7 +15,7 @@ const App = props => {
       </header>
       <main>
         <Count />
-        <Name updateName={setName} />
+        {/* <Name updateName={setName} /> */}
         <Status />
       </main>
       <footer>

@@ -1,7 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react';
+let isLoaded = false;
 
 const Count = props => {
   const [count, setCount] = useState(0);
+
+  if (!isLoaded) {
+    console.warn('hello');
+    isLoaded = true;
+  }
 
   useEffect(() => {
     document.title = `You clicked ${count} times`;
