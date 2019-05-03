@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import Name from './components/Name2';
+import Name from './components/Name3';
 import Count from './components/Count2';
 import Status from './components/Status';
 import logo from './logo.svg';
