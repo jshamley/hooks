@@ -5,7 +5,7 @@ import Status from './components/Status';
 import logo from './logo.svg';
 import './App.css';
 
-const App = props => {
+const App = () => {
   const [name, setName] = useState('');
 
   return (
@@ -15,7 +15,7 @@ const App = props => {
       </header>
       <main>
         <Count />
-        {/* <Name updateName={setName} /> */}
+        <Name updateName={setName} />
         <Status />
       </main>
       <footer>
