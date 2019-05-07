@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useReducer } from 'react';
+import React, { Fragment, useReducer } from 'react';
 import PropTypes from 'prop-types';
 
 const initialState = { name: 'Tommy Bahama', otherName: 'Jimmy Hoffa' };
